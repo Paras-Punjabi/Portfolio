@@ -4,25 +4,35 @@ import Link from "next/link";
 import React from "react";
 import { FaLongArrowAltRight } from "react-icons/fa";
 
-const Education = () => {
+const Timeline = () => {
     const data = [
         {
-            title:"National Institute of Technology Patna(NITP)",
+            title:"Product Engineer at Tata Consultancy Services (TCS)",
+            desc:"Working as a Python Backend Developer, I have hands-on experience with FastAPI, Elasticsearch (ELK Stack), Pandas, Numpy and Kafka. I've developed Python scripts to query and aggregate data from Elasticsearch, exporting structured results to Excel files, and built automation tools using Paramiko, PyAutoGUI, and multithreading to streamline report generation and operational workflows.",
+            extra:`Experience: ${((new Date().getTime() - new Date("09-1-2024").getTime())/(1000*60*60*24*30)).toFixed(1)} months`,
+            time:"Sept 2024 - Present",
+            location:"Bengaluru, Karnataka, India"
+        },
+        {
+            title:"National Institute of Technology Patna (NITP)",
             desc:"Student of Bachelor of Technology(B.Tech) with specialization in Computer Science and Engineering(CSE). Going to graduate in June 2024",
-            score:"8.41 CGPA",
-            time:"Dec 2020 - Present"
+            extra:"Score: 8.52 CGPA",
+            time:"Dec 2020 - May 2024",
+            location:"Patna, Bihar, India"
         },
         {
             title:"La Sagesse Academy",
-            desc:"Student of Science(PCM) in class 12th of CBSE board",
-            score:"90.8%",
-            time:"April 2019 - March 2020"
+            desc:"Student of Science (PCM) in class 12th of CBSE board",
+            extra:"Score: 90.8 %",
+            time:"April 2019 - March 2020",
+            location:"Indore, Madhya Pradesh, India"
         },
         {
             title:"La Sagesse Academy",
             desc:"Class 10th of CBSE board",
-            score:"85.2%",
-            time:"April 2017 - March 2018"
+            extra:"Score: 85.2 %",
+            time:"April 2017 - March 2018",
+            location:"Indore, Madhya Pradesh, India"
         }
     ]
   return (
@@ -40,12 +50,13 @@ const Education = () => {
                         <div className="w-10 h-1 bg-white absolute -left-10 z-0"></div>
 
                         <div className="flex flex-col justify-evenly items-start">
-                            <h1 className="text-2xl font-bold" style={{color:"#0BACBA"}}>
+                            <h1 className="text-3xl font-bold" style={{color:"#0BACBA"}}>
                             {item.title}
                             </h1>
-                            <h3 className="text-xl">{item.desc}</h3>
-                            <h3 className="text-xl mt-1" >Score : {item.score}</h3>
-                            <h3 className="text-xl">{item.time}</h3>
+                            <h3 className="text-xl my-2 text-gray-200">{item.desc}</h3>
+                            {item.extra && <h3 className="text-lg mt-1 font-bold" >{item.extra}</h3>}
+                            <h3 className="text-lg font-bold">Location: {item.location}</h3>
+                            <h3 className="text-lg font-bold">{item.time}</h3>
                         </div>
                         </div>
                     </div>
@@ -53,7 +64,7 @@ const Education = () => {
                 })
             }
         </div>
-        <Link className="mt-2" href={"/work"}>
+        <Link className="my-2" href={"/work"}>
             <button className="text-xl border rounded-md p-2 bg-slate-300 text-black transition-colors flex justify-between items-center mx-auto">
                 <span className="mx-1">Work</span>{" "}
                 <span className="mx-1">
@@ -61,10 +72,9 @@ const Education = () => {
                 </span>
                 </button>
           </Link>
-          
       </div>
     </>
   );
 };
 
-export default Education;
+export default Timeline;

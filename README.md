@@ -1,5 +1,8 @@
+
 # Paras Punjabi Portfolio
-### Tech-Stack Used
+
+## Tech-Stack Used
+
 - NextJS/ReactJS
 - Tailwind CSS
 - Typescript

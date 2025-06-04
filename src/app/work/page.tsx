@@ -7,10 +7,24 @@ import { FaCode, FaLongArrowAltRight } from "react-icons/fa";
 const Work = () => {
     const projects = [
         {
+            name:"PixTweak",
+            desc:"A FastAPI web application inspired by ImageKit.io, enabling on-the-fly image transformations through URL parameters. It provides dynamic image transformation through URL query parameters, allowing changes like height, width, rotation, flip, adding text on image etc. The transformations are performed on demand, making the application efficient and user-friendly. Tech Stacks used in this project are FastAPI, Numpy, OpenCV, RabbitMQ, MySQL, Docker and Docker-Compose.",
+            link:"https://github.com/Paras-Punjabi/PixTweak",
+        },
+        {
+            name:"Music Mood Classification Model",
+            desc:"It is a deep learning model made in Python. It helps us to classify a wav file into 'aggressive', 'sad', 'romantic', 'happy' and 'dramatic' classes. Tech Stacks used in this project are Numpy, Pandas, Tensorflow/Keras, Sklearn, Librosa and Matplotlib.Built 3 architectures and got accuracies of 86%, 73% and 74% when tested on kaggle's music mood classification dataset.",
+            link:"https://github.com/Paras-Punjabi/music-mood-classification",
+        },
+        {
+            name:"PDF-GPT",
+            desc:"A RAG Application made using Python, Vite, FastAPI as backend, PostgreSQL as database, Langchain and FAISS (Facebook AI Similarity Search) as vector database. Users can upload pdf and can ask questions related to it. In this I have used GoogleGenerativeAI LLM model to generate text. It has chat architecture where we can chat with LLM in different context at the same time.",
+            link:"https://github.com/Paras-Punjabi/PDF-GPT",
+        },
+        {
             name:"Paras Dive",
             desc:"A Google drive clone made using Next.js, React.js, Tailwind CSS, Express.js, and MongoDB. Users can upload & remove files and can perform CRUD operations for notes. MVC structure is followed for building source code. Frontend and backend are hosted seperately on vercel and render platforms. Database used here is on MongoDB Atlas cloud platform.",
             link:"https://www.github.com/Paras-Punjabi/Paras-Drive",
-            demo:"https://paras-drive.vercel.app/"
         },
         {
             name:"Visual Science",
@@ -26,7 +40,7 @@ const Work = () => {
         },
         {
             name:"Two Stream Network for Vision Based Human Activity Recognition",
-            desc:"It is a deep learning model made in python. It helps us to detect and categorise violent actions done by humans in a video. Tech Stacks used in this project are Numpy, Pandas, Tensorflow/Keras, Sklearn, ConvLSTM2D, CNN, Attention, Computer Vision(opencv-python)",
+            desc:"It is a deep learning model made in Python. It helps us to detect and categorise violent actions done by humans in a video. Tech Stacks used in this project are Numpy, Pandas, Tensorflow/Keras, Sklearn, ConvLSTM2D, CNN, Attention, Computer Vision(opencv-python)",
             link:"https://github.com/Paras-Punjabi/TWO-STREAM-NETWORK-FOR-VISION-BASED-VOILENCE-DETECTION",
         },
         {
@@ -72,38 +86,41 @@ const Work = () => {
               More work will be soon...
             </p>
           </div>
-          <div className="flex flex-wrap">
-            {projects.map((item,idx)=>{
-                return(<div key={idx} className="xl:w-1/3 md:w-1/2 p-2">
-                <div className="border border-transparent bg-gray-900 p-6 rounded-lg">
-                  <h2 className="text-lg text-white font-medium title-font mb-2">
-                    {item.name}
-                  </h2>
-                  <p className="leading-relaxed text-base">
-                    {item.desc}
-                  </p>
-                  <div className="flex justify-between mt-4">
-                    <div>
-
-                    <Link href={item.link} target="_blank">
-                      <button className="text-white bg-indigo-500 py-2 px-2 focus:outline-none hover:bg-indigo-600 rounded text-base">
-                          Source Code
-                      </button>
-                    </Link>
-                      {item.demo && <Link href={item.demo} target="_blank">
-                      <button className="text-white bg-indigo-500 mx-2 py-2 px-2 focus:outline-none hover:bg-indigo-600 rounded text-base">
-                          Demo
-                      </button>
-                    </Link>}
-                    </div>
-                    <div className="w-10 h-10 inline-flex items-center justify-center rounded-full bg-gray-800 text-indigo-400">
-                  <FaCode className="text-xl" />
-                  </div>
-                  </div>
+            <div className="flex flex-wrap justify-center">
+            {projects.map((item, idx) => (
+              <div key={idx} className="xl:w-1/3 md:w-1/2 p-2 flex">
+              <div className="border border-transparent bg-gray-900 p-6 rounded-lg flex flex-col justify-between w-full h-full min-h-[320px]">
+                <div>
+                <h2 className="text-lg text-white font-medium title-font mb-2">
+                  {item.name}
+                </h2>
+                <p className="leading-relaxed text-base">
+                  {item.desc}
+                </p>
                 </div>
-              </div>)
-            })}
-          </div>
+                <div className="flex justify-between mt-4 items-end">
+                <div>
+                  <Link href={item.link} target="_blank">
+                  <button className="text-white bg-indigo-500 py-2 px-2 focus:outline-none hover:bg-indigo-600 rounded text-base">
+                    Source Code
+                  </button>
+                  </Link>
+                  {item.demo && (
+                  <Link href={item.demo} target="_blank">
+                    <button className="text-white bg-indigo-500 mx-2 py-2 px-2 focus:outline-none hover:bg-indigo-600 rounded text-base">
+                    Demo
+                    </button>
+                  </Link>
+                  )}
+                </div>
+                <div className="w-10 h-10 inline-flex items-center justify-center rounded-full bg-gray-800 text-indigo-400">
+                  <FaCode className="text-xl" />
+                </div>
+                </div>
+              </div>
+              </div>
+            ))}
+            </div>
 
           <Link href={"/contact"}>
             <button className="text-xl border rounded-md p-2 my-5 bg-slate-300 text-black transition-colors flex justify-between items-center mx-auto">

@@ -11,7 +11,7 @@ const Navbar = ({hidetitle = false}:{hidetitle:boolean}) => {
     </Link>}
     <nav className={`md:mr-auto  md:py-1 md:pl-4 md:ml-4 ${!hidetitle && "md:border-l"} md:border-gray-10 flex flex-wrap items-center ${!hidetitle ? "text-lg" : "text-2xl"} ${!hidetitle ? "justify-center" : "justify-around"}`} style={{width:`${hidetitle && "60vw"}`}}>
         <Link href={"/about"} className={`${hidetitle && "hover:border hover:rounded-md hover:bg-white hover:text-black transition-colors "} mr-7 p-1.5 text-white`}>About</Link>
-        <Link href={"/education"} className={`${hidetitle && "hover:border hover:rounded-md hover:bg-white hover:text-black transition-colors "}  mr-7 p-1.5 text-white`}>Education</Link>
+        <Link href={"/timeline"} className={`${hidetitle && "hover:border hover:rounded-md hover:bg-white hover:text-black transition-colors "}  mr-7 p-1.5 text-white`}>Timeline</Link>
         <Link href={"/work"} className={`${hidetitle && "hover:border hover:rounded-md hover:bg-white hover:text-black transition-colors "} mr-7 p-1.5 text-white`}>Work</Link>
         <Link href={"/contact"} className={`${hidetitle && "hover:border hover:rounded-md hover:bg-white hover:text-black transition-colors "} mr-7 p-1.5 text-white`}>Contact</Link>
     </nav>

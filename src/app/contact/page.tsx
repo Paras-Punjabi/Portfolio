@@ -77,7 +77,7 @@ const Contact = () => {
       <p className="text-lg text-white mt-3">
         <div><span className='font-bold text-gray-500'>Address: </span><span>18 Jairampur Colony Near Collector Office, Indore, M.P.</span></div>
         <div><span className='font-bold text-gray-500'>Email: </span><span><Link href="mailto:paraspunjabi2002@gmail.com">paraspunjabi2002@gmail.com</Link></span></div>
-        <div><span className='font-bold text-gray-500'>Phone: </span><span><Link href="tel:+916204723921">+916204723921</Link> & <Link href="tel:+918989834510">+918989834510</Link></span></div>
+        <div><span className='font-bold text-gray-500'>Phone: </span><span><Link href="tel:+918989834510">+918989834510</Link></span></div>
       </p>
     </div>
   </div>

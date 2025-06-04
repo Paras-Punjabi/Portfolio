@@ -8,10 +8,10 @@ import { FaLongArrowAltRight } from "react-icons/fa";
 const Page = () => {
   const text = useTypewriter({
     words: [
-      "HI, I'M Paras",
-      "I'M a Software Developer",
-      "I'M a Full Stack Developer",
-      "I'M also AI/ML/DL Enthusiast",
+      "HI, I'm Paras",
+      "I'm a Software Developer",
+      "I'm a AI/ML/DL Developer",
+      "I'm a Full Stack Developer",
     ],
     typeSpeed: 100,
     deleteSpeed: 100,
