@@ -47,8 +47,8 @@ const About = () => {
                 </Link>
           </div>
             <div className="flex">
-              <Link href="/education">
-              <button className="btn text-xl border rounded-md p-2 my-5 hover:bg-slate-300 hover:text-black transition-colors flex justify-between items-center"><span className="mx-1">Education</span> <span className="mx-1"><FaLongArrowAltRight/></span>  </button>
+              <Link href="/timeline">
+              <button className="btn text-xl border rounded-md p-2 my-5 hover:bg-slate-300 hover:text-black transition-colors flex justify-between items-center"><span className="mx-1">Timeline</span> <span className="mx-1"><FaLongArrowAltRight/></span>  </button>
               </Link>
               <Link href="https://drive.google.com/file/d/1WmSPWJWljaLP5DN6GzeiLNYABRABfVLf/view?usp=drive_link" target="_blank">
                 <button className="btn text-xl mx-3 border rounded-md p-2 my-5 hover:bg-slate-300 hover:text-black transition-colors flex justify-between items-center"><span className="mx-1">Resume</span> <span className="mx-1"><FaLongArrowAltRight/></span>  </button>
