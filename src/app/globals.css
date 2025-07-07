@@ -1,0 +1,57 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.bg{
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100vw 100vh;
+    height: 100vh;
+    width: 100vw;
+    background-image : linear-gradient(rgba(0, 0, 0, 0.6),rgba(0, 0, 0, 0.6)) , url("/bg1.jpg");
+}
+
+.about-bg{
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100vw 100vh;
+    min-height: 100vh;
+    min-width: 100vw;
+    background-image: url("/bg5.jpg");
+}
+
+.edu-bg{
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100%;
+    min-height: 100vh;
+    min-width: 100vw;
+    background-image : linear-gradient(rgba(0, 0, 0, 0.8),rgba(0, 0, 0, 0.8)) , url("/bg3.jpg");
+}
+
+.skills-bg{
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100%;
+    min-height: 100vh;
+    min-width: 100vw;
+    background-image : linear-gradient(rgba(0, 0, 0, 0.8),rgba(0, 0, 0, 0.8)) , url("/bg6.jpg");
+}
+
+.work-bg{
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100%;
+    height: 100%;
+    width: 100%;
+    background-image : linear-gradient(rgba(0, 0, 0, 0.7),rgba(0, 0, 0, 0.7)) , url("/bg4.jpg");
+}
+.contact-bg{
+    background-color: #111827;
+}
+
