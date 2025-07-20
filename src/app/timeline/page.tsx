@@ -11,6 +11,13 @@ const Timeline = () => {
             location:"Bengaluru, Karnataka, India"
         },
         {
+            title:"NextJS Developer Intern at Debales.AI",
+            desc:"As a NextJS Developer Intern, I worked on building and maintaining full-stack applications using Next.js v14, TailwindCSS, and Docker. I developed and managed APIs for platforms like debales.ai and brainlox.ai, integrating FastAPI and Express backends and deploying on AWS with DynamoDB database. I also built chatbot-enabled websites using Retrieval-Augmented Generation (RAG) architecture, leveraging open-source LLMs such as OpenAI and Google Gemini along with vector databases like Pinecone and FAISS through Langchain.",
+            extra:`Duration: 6 months`,
+            time:"Feb 2024 - July 2024",
+            location:"Remote, Texas, USA"
+        },
+        {
             title:"National Institute of Technology Patna (NITP)",
             desc:"Student of Bachelor of Technology(B.Tech) with specialization in Computer Science and Engineering(CSE). Going to graduate in June 2024",
             extra:"Score: 8.52 CGPA",

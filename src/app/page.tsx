@@ -1,16 +1,14 @@
 "use client";
 import Navbar from "@/components/Navbar";
-import Link from "next/link";
 import React from "react";
 import { useTypewriter, Cursor } from "react-simple-typewriter";
-import { FaLongArrowAltRight } from "react-icons/fa";
 
 const Page = () => {
   const text = useTypewriter({
     words: [
-      "HI, I'm Paras",
+      "HI, I'm Paras Punjabi",
       "I'm a Software Developer",
-      "I'm a AI/ML/DL Developer",
+      "I'm a ML/DL/AI Developer",
       "I'm a Full Stack Developer",
     ],
     typeSpeed: 100,
@@ -22,17 +20,16 @@ const Page = () => {
       <div className="bg text-white">
         <Navbar hidetitle={false} />
         <div
-          className="flex items-center justify-evenly flex-col w-screen h-5/6"
-          // style={{ height: "100vh",width:"100vw" }}
+          className="flex items-center justify-evenly flex-col w-screen h-[72%] md:h-[75%] lg:h-[78%]"
         >
-          <div className="text-center" style={{fontSize:"max(7vw,100px)"}}>
+            <div className="text-center text-[35px] md:text-5xl lg:text-7xl xl:text-9xl">
             {text}
             <Cursor
               cursorBlinking={true}
-              cursorStyle={"|"}
+              cursorStyle="|"
               cursorColor="white"
             />
-          </div>
+            </div>
         </div>
       </div>
     </>
