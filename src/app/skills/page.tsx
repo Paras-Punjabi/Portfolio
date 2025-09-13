@@ -3,12 +3,13 @@ import React from 'react'
 import { FaAws, FaDocker, FaGitAlt, FaJava, FaLongArrowAltRight, FaNodeJs, FaPython, FaReact } from "react-icons/fa";
 import { TbBinaryTree, TbBrandCpp, TbBrandElastic } from "react-icons/tb";
 import { IoLogoJavascript, IoLogoHtml5  } from "react-icons/io5";
-import { SiAmazondynamodb, SiApachekafka, SiFastapi, SiFlask, SiLangchain, SiMongodb, SiNumpy, SiOpencv, SiPandas, SiPostgresql, SiPytorch, SiRabbitmq, SiScikitlearn, SiTensorflow, SiTypescript, SiVite } from "react-icons/si";
-import { TbBrandMysql } from "react-icons/tb";
+import { SiAmazondynamodb, SiApachekafka, SiFastapi, SiFlask, SiLangchain, SiMongodb, SiNumpy, SiOpencv, SiPandas, SiPostgresql, SiPytorch, SiRabbitmq, SiScikitlearn, SiTensorflow, SiTypescript, SiVite, SiClerk } from "react-icons/si";
+import { TbBrandMysql, TbBrandOpenai  } from "react-icons/tb";
 import { IoLogoCss3 } from "react-icons/io";
-import { SiExpress } from "react-icons/si";
+import { SiExpress, SiKubernetes, SiMinio } from "react-icons/si";
 import { DiLinux, DiRedis } from 'react-icons/di';
 import { RiBootstrapFill, RiFirebaseFill, RiNextjsLine, RiSupabaseFill, RiTailwindCssFill } from 'react-icons/ri';
+
 
 const Skills = () => {
     const skillsMap = [
@@ -17,6 +18,7 @@ const Skills = () => {
         {"Java":<FaJava  fontSize={70} />},
         {"JavaScript":<IoLogoJavascript  fontSize={70} />},
         {"NodeJS":<FaNodeJs fontSize={70} />},
+        {"ClerkJS":<SiClerk fontSize={70} />},
         {"Typescript":<SiTypescript fontSize={70} />},
         {"HTML":<IoLogoHtml5  fontSize={70} />},
         {"CSS":<IoLogoCss3  fontSize={70} />},
@@ -37,7 +39,9 @@ const Skills = () => {
         {"Git":<FaGitAlt  fontSize={70} />},
         {"AWS Services":<FaAws   fontSize={70} />},
         {"Docker":<FaDocker   fontSize={70} />},
+        {"Kubernetes":<SiKubernetes fontSize={70} />},
         {"RabbitMQ":<SiRabbitmq    fontSize={70} />},
+        {"MinIO S3":<SiMinio     fontSize={70} />},
         {"Kafka":<SiApachekafka    fontSize={70} />},
         {"Redis":<DiRedis fontSize={70} />},
         {"Numpy":<SiNumpy fontSize={70} />},
@@ -50,6 +54,7 @@ const Skills = () => {
         {"Firebase":<RiFirebaseFill    fontSize={70} />},
         {"Supabase":<RiSupabaseFill     fontSize={70} />},
         {"Linux":<DiLinux fontSize={70} />},
+        {"OpenAI":<TbBrandOpenai fontSize={70} />},
     ]
   return (
     <div className='skills-bg'>
