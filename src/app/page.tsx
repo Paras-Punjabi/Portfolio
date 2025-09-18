@@ -1,5 +1,6 @@
 "use client";
 import Navbar from "@/components/Navbar";
+import { NextSeo } from "next-seo";
 import React from "react";
 import { useTypewriter, Cursor } from "react-simple-typewriter";
 
@@ -17,6 +18,41 @@ const Page = () => {
   })[0];
   return (
     <>
+      <NextSeo
+          title="Paras Punjabi - Software Engineer | Full Stack, AI & ML & DL & GenAI Developer"
+          description="Welcome to the portfolio of Paras Punjabi, a Software Engineer from Indore with a B.Tech in Computer Science from NIT Patna. Passionate about Full Stack Web Development, Machine Learning, Deep Learning, Artificial Intelligence, RAG, and Problem Solving."
+          canonical="https://paras-punjabi.vercel.app"
+          openGraph={{
+            url: 'https://paras-punjabi.vercel.app',
+            title: 'Paras Punjabi - Software Engineer | Portfolio',
+            description:
+              "Welcome to the portfolio of Paras Punjabi, a Software Engineer from Indore with a B.Tech in Computer Science from NIT Patna. Passionate about Full Stack Web Development, Machine Learning, Deep Learning, Artificial Intelligence, RAG, and Problem Solving.",
+            images: [
+              {
+                url: 'https://paras-punjabi.vercel.app/favicon.png',
+                alt: 'Paras Punjabi',
+                type: 'image/png',
+              },
+              {
+                url: 'https://paras-punjabi.vercel.app/me.jpg',
+                alt: 'Paras Punjabi',
+                type: 'image/png',
+              }
+            ],
+            siteName: 'Paras Punjabi Portfolio',
+          }}
+          additionalMetaTags={[
+            {
+              name: 'keywords',
+              content:
+                'Paras Punjabi, Software Engineer, Portfolio, Full Stack Web Development, Machine Learning, Deep Learning, Artificial Intelligence, RAG, Problem Solving, Indore, NIT Patna, Computer Science',
+            },
+            {
+              name: 'author',
+              content: 'Paras Punjabi',
+            },
+          ]}
+        />
       <div className="bg text-white">
         <Navbar hidetitle={false} />
         <div

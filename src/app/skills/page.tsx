@@ -1,6 +1,6 @@
 import Navbar from '@/components/Navbar'
 import React from 'react'
-import { FaAws, FaDocker, FaGitAlt, FaJava, FaLongArrowAltRight, FaNodeJs, FaPython, FaReact } from "react-icons/fa";
+import { FaAws, FaDocker, FaGitAlt, FaJava, FaNodeJs, FaPython, FaReact } from "react-icons/fa";
 import { TbBinaryTree, TbBrandCpp, TbBrandElastic } from "react-icons/tb";
 import { IoLogoJavascript, IoLogoHtml5  } from "react-icons/io5";
 import { SiAmazondynamodb, SiApachekafka, SiFastapi, SiFlask, SiLangchain, SiMongodb, SiNumpy, SiOpencv, SiPandas, SiPostgresql, SiPytorch, SiRabbitmq, SiScikitlearn, SiTensorflow, SiTypescript, SiVite, SiClerk } from "react-icons/si";
@@ -9,6 +9,77 @@ import { IoLogoCss3 } from "react-icons/io";
 import { SiExpress, SiKubernetes, SiMinio } from "react-icons/si";
 import { DiLinux, DiRedis } from 'react-icons/di';
 import { RiBootstrapFill, RiFirebaseFill, RiNextjsLine, RiSupabaseFill, RiTailwindCssFill } from 'react-icons/ri';
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Paras Punjabi - Skills",
+  description:
+    "Discover the technical skills of Paras Punjabi across Python, C/C++, Java, JavaScript, NodeJS, ClerkJS, Typescript, HTML, CSS, DSA, ReactJS, NextJS, Vite, ExpressJS, TailwindCSS, Bootstrap, FastAPI, Flask, MongoDB, MySQL, DynamoDB, PostgreSQL, Pinecone, ElasticSearch, Git, AWS, Docker, Kubernetes, RabbitMQ, MinIO S3, Kafka, Redis, Numpy, Pandas, Scikit, Tensorflow, PyTorch, Computer, Langchain, Firebase, Supabase, Linux, OpenAI. Showcasing expertise in AI, ML, RAG, and full-stack development.",
+  alternates: {
+    canonical: "https://paras-punjabi.vercel.app/skills",
+  },
+  openGraph: {
+    url: "https://paras-punjabi.vercel.app/skills",
+    title: "Paras Punjabi - Skills",
+    description:
+      "Discover the technical skills of Paras Punjabi across Python, C/C++, Java, JavaScript, NodeJS, ClerkJS, Typescript, HTML, CSS, DSA, ReactJS, NextJS, Vite, ExpressJS, TailwindCSS, Bootstrap, FastAPI, Flask, MongoDB, MySQL, DynamoDB, PostgreSQL, Pinecone, ElasticSearch, Git, AWS, Docker, Kubernetes, RabbitMQ, MinIO S3, Kafka, Redis, Numpy, Pandas, Scikit, Tensorflow, PyTorch, Computer, Langchain, Firebase, Supabase, Linux, OpenAI. Showcasing expertise in AI, ML, RAG, and full-stack development.",
+    images: [
+      {
+        url: "https://paras-punjabi.vercel.app/favicon.png",
+        alt: "Paras Punjabi - Skills",
+        type: "image/png",
+      },
+    ],
+    siteName: "Paras Punjabi Portfolio",
+  },
+  keywords: [
+    "Paras Punjabi",
+    "Python",
+    "C/C++",
+    "Java",
+    "JavaScript",
+    "NodeJS",
+    "ClerkJS",
+    "Typescript",
+    "HTML",
+    "CSS",
+    "DSA",
+    "ReactJS",
+    "NextJS",
+    "Vite",
+    "ExpressJS",
+    "TailwindCSS",
+    "Bootstrap",
+    "FastAPI",
+    "Flask",
+    "MongoDB",
+    "MySQL",
+    "DynamoDB",
+    "PostgreSQL",
+    "Pinecone",
+    "ElasticSearch",
+    "Git",
+    "AWS",
+    "Docker",
+    "Kubernetes",
+    "RabbitMQ",
+    "MinIO S3",
+    "Kafka",
+    "Redis",
+    "Numpy",
+    "Pandas",
+    "Scikit",
+    "Tensorflow",
+    "PyTorch",
+    "Computer",
+    "Langchain",
+    "Firebase",
+    "Supabase",
+    "Linux",
+    "OpenAI",
+  ],
+  authors: [{ name: "Paras Punjabi" }],
+};
 
 
 const Skills = () => {

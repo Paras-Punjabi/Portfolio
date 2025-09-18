@@ -3,7 +3,53 @@ import Link from "next/link";
 import React from "react";
 import { dbConnection } from "@/db";
 import { projectsTable } from "@/db/schema";
-import { FaCode, FaLongArrowAltRight } from "react-icons/fa";
+import { FaCode } from "react-icons/fa";
+import type { Metadata } from 'next'
+
+export const metadata: Metadata = {
+  title: "Paras Punjabi - Work",
+  description:
+    "Discover the work of Paras Punjabi, a software engineer building innovative projects in Python, FastAPI, React, Next.js, Node.js, TensorFlow, PyTorch, OpenCV, LangChain, Docker, Kubernetes, SQL, and Kafka, showcasing AI, ML, RAG, and full-stack development skills.",
+  alternates: {
+    canonical: "https://paras-punjabi.vercel.app/work",
+  },
+  openGraph: {
+    url: "https://paras-punjabi.vercel.app/work",
+    title: "Paras Punjabi - Work",
+    description:
+      "Explore Paras Punjabi's portfolio featuring projects in Python, FastAPI, React, Next.js, Node.js, TensorFlow, PyTorch, OpenCV, LangChain, Docker, Kubernetes, SQL, and Kafka. Showcasing AI, ML, RAG, and full-stack development.",
+    images: [
+      {
+        url: "https://paras-punjabi.vercel.app/favicon.png",
+        alt: "Paras Punjabi - Work",
+        type: "image/png",
+      },
+    ],
+    siteName: "Paras Punjabi Portfolio",
+  },
+  keywords: [
+    "Paras Punjabi",
+    "Portfolio",
+    "Python",
+    "FastAPI",
+    "React",
+    "Next.js",
+    "Node.js",
+    "TensorFlow",
+    "PyTorch",
+    "OpenCV",
+    "LangChain",
+    "Docker",
+    "Kubernetes",
+    "SQL",
+    "Kafka",
+    "AI projects",
+    "ML projects",
+    "RAG",
+    "Full-Stack Developer",
+  ],
+  authors: [{ name: "Paras Punjabi" }],
+};
 
 const Work = async () => {
   const projects = await dbConnection.select().from(projectsTable);

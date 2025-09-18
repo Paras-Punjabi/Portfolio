@@ -4,6 +4,7 @@ import Link from 'next/link'
 import React,{useEffect, useRef, useState} from 'react'
 import emailjs from  '@emailjs/browser'
 import toast, { Toaster } from 'react-hot-toast'
+import { NextSeo } from 'next-seo'
 
 const Contact = () => {
   const btn = useRef<HTMLButtonElement>(null)
@@ -53,6 +54,37 @@ const Contact = () => {
   }
 
   return (
+    <>
+    <NextSeo
+      title="Paras Punjabi - Contact"
+      description="Get in touch with Paras Punjabi for collaboration, freelance projects, or career opportunities in Python, FastAPI, React, Next.js, Node.js, TensorFlow, PyTorch, OpenCV, LangChain, Docker, Kubernetes, SQL, Kafka, AI, ML, and full-stack development."
+      canonical="https://paras-punjabi.vercel.app/contact"
+      openGraph={{
+        url: 'https://paras-punjabi.vercel.app/contact',
+        title: 'Paras Punjabi - Contact',
+        description:
+          'Reach out to Paras Punjabi for collaborations, hiring, or networking. Experienced in Python, FastAPI, React, Next.js, Node.js, TensorFlow, PyTorch, OpenCV, LangChain, Docker, Kubernetes, SQL, Kafka, AI, ML, RAG, and full-stack development.',
+        images: [
+          {
+            url: 'https://paras-punjabi.vercel.app/favicon.png',
+            alt: 'Paras Punjabi - Contact',
+            type: 'image/png',
+          },
+        ],
+        siteName: 'Paras Punjabi Portfolio',
+      }}
+      additionalMetaTags={[
+        {
+          name: 'keywords',
+          content:
+            'Paras Punjabi, contact, get in touch, collaborations, hire, freelance, Python, FastAPI, React, Next.js, Node.js, TensorFlow, PyTorch, OpenCV, LangChain, Docker, Kubernetes, SQL, Kafka, AI, ML, RAG, full-stack developer',
+        },
+        {
+          name: 'author',
+          content: 'Paras Punjabi',
+        },
+      ]}
+    />
     <div className='contact-bg'>
       <div><Toaster/></div>
         <Navbar hidetitle={false}/>
@@ -85,6 +117,7 @@ const Contact = () => {
   </div>
 </section>
     </div>
+    </>
   )
 }
 

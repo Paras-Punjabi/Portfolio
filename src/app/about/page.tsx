@@ -4,6 +4,45 @@ import Image from "next/image";
 import { FaGithub, FaLinkedin, FaInstagram, FaFacebookSquare,FaLongArrowAltRight } from "react-icons/fa";
 import { SiLeetcode } from "react-icons/si";
 import Link from "next/link";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Paras Punjabi - About",
+  description:
+    "Learn about Paras Punjabi, a Software Engineer from Indore, Madhya Pradesh, with a B.Tech in Computer Science from NIT Patna. Passionate about Full Stack Web Development, Machine Learning, Deep Learning, and Problem Solving, aspiring to grow as a Software Development Engineer.",
+  alternates: {
+    canonical: "https://paras-punjabi.vercel.app/about",
+  },
+  openGraph: {
+    url: "https://paras-punjabi.vercel.app/about",
+    title: "Paras Punjabi - About",
+    description:
+      "Hey! My name is Paras Punjabi. I am from Indore, Madhya Pradesh, and hold a B.Tech in Computer Science from NIT Patna. I specialize in Full Stack Web Development, Machine Learning, Deep Learning, and Problem Solving. My goal is to become a skilled Software Development Engineer and contribute meaningfully to the field.",
+    images: [
+      {
+        url: "https://paras-punjabi.vercel.app/favicon.png",
+        alt: "Paras Punjabi - About",
+        type: "image/png",
+      },
+    ],
+    siteName: "Paras Punjabi Portfolio",
+  },
+  keywords: [
+    "Paras Punjabi",
+    "about",
+    "software engineer",
+    "Indore",
+    "Madhya Pradesh",
+    "NIT Patna",
+    "Computer Science",
+    "Full Stack Web Development",
+    "Machine Learning",
+    "Deep Learning",
+    "Problem Solving",
+    "Software Development Engineer",
+  ],
+  authors: [{ name: "Paras Punjabi" }],
+};
 
 const About = () => {
   return (
