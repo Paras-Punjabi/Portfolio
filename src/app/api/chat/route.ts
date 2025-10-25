@@ -11,6 +11,8 @@ import {
 } from "@langchain/core/messages";
 import { SupabaseVectorStore } from "@langchain/community/vectorstores/supabase";
 import { createClient, SupabaseClient } from "@supabase/supabase-js";
+import getConfig from "next/config";
+const { serverRuntimeConfig } = getConfig();
 
 export const runtime = "nodejs";
 export const dynamic = "force-dynamic";
@@ -42,9 +44,6 @@ Behavior rules:
 - Do not use bad words or sexual language in front of the user.
 `;
 
-// import { config } from "dotenv";
-// config();
-
 // -----------------------------
 // ⚡ Lazy singletons
 // -----------------------------
@@ -56,11 +55,11 @@ let vectorStore: SupabaseVectorStore | null = null;
 // Initialize only once per runtime
 function getClients() {
   if (!llm) {
-    const GEMINI_API_KEY = process.env.GEMINI_API_KEY!;
+    const GEMINI_API_KEY = serverRuntimeConfig.GEMINI_API_KEY!;
     const GEMINI_MODEL = "models/gemini-2.5-flash";
     const GEMINI_EMBEDDING_MODEL = "models/gemini-embedding-001";
-    const SUPABASE_SERVICE_KEY = process.env.SUPABASE_SERVICE_KEY!;
-    const SUPABASE_URL = process.env.SUPABASE_URL!;
+    const SUPABASE_SERVICE_KEY = serverRuntimeConfig.SUPABASE_SERVICE_KEY!;
+    const SUPABASE_URL = serverRuntimeConfig.SUPABASE_URL!;
 
     llm = new ChatGoogleGenerativeAI({
       apiKey: GEMINI_API_KEY,
