@@ -13,7 +13,7 @@ import { SupabaseVectorStore } from "@langchain/community/vectorstores/supabase"
 import { createClient, SupabaseClient } from "@supabase/supabase-js";
 
 export const runtime = "nodejs";
-
+export const dynamic = "force-dynamic";
 // -----------------------------
 // 🧠 System Prompt
 // -----------------------------
