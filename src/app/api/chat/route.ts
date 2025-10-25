@@ -12,8 +12,7 @@ import {
 import { SupabaseVectorStore } from "@langchain/community/vectorstores/supabase";
 import { createClient } from "@supabase/supabase-js";
 
-// import { config } from "dotenv";
-// config();
+export const runtime = "nodejs";
 
 const SYSTEM_PROMPT = `
 You are ParasBot — a friendly, intelligent, and professional AI assistant built by Paras for his personal website.
@@ -40,34 +39,35 @@ Behavior rules:
 - Do not use bad words or sexual language in front of the user.
 `;
 
-const GEMINI_API_KEY = process.env.GEMINI_API_KEY!;
-const GEMINI_MODEL = process.env.GEMINI_MODEL!;
-const GEMINI_EMBEDDING_MODEL = process.env.GEMINI_EMBEDDING_MODEL!;
-const SUPABASE_SERVICE_KEY = process.env.SUPABASE_SERVICE_KEY!;
-const SUPABASE_URL = process.env.SUPABASE_URL!;
-
-const llm = new ChatGoogleGenerativeAI({
-  apiKey: GEMINI_API_KEY,
-  model: GEMINI_MODEL,
-  temperature: 0.7,
-});
-
-const embeddingsModel = new GoogleGenerativeAIEmbeddings({
-  apiKey: GEMINI_API_KEY,
-  model: GEMINI_EMBEDDING_MODEL,
-});
-
-const supabaseClient = createClient(SUPABASE_URL, SUPABASE_SERVICE_KEY);
-
-const vectorStore = new SupabaseVectorStore(embeddingsModel, {
-  client: supabaseClient,
-  tableName: "documents",
-  queryName: "match_documents",
-});
-
 export async function POST(req: NextRequest) {
   try {
     const chats = await req.json();
+
+    const GEMINI_API_KEY = process.env.GEMINI_API_KEY!;
+    const GEMINI_MODEL = process.env.GEMINI_MODEL!;
+    const GEMINI_EMBEDDING_MODEL = process.env.GEMINI_EMBEDDING_MODEL!;
+    const SUPABASE_SERVICE_KEY = process.env.SUPABASE_SERVICE_KEY!;
+    const SUPABASE_URL = process.env.SUPABASE_URL!;
+
+    const llm = new ChatGoogleGenerativeAI({
+      apiKey: GEMINI_API_KEY,
+      model: GEMINI_MODEL,
+      temperature: 0.7,
+    });
+
+    const embeddingsModel = new GoogleGenerativeAIEmbeddings({
+      apiKey: GEMINI_API_KEY,
+      model: GEMINI_EMBEDDING_MODEL,
+    });
+
+    const supabaseClient = createClient(SUPABASE_URL, SUPABASE_SERVICE_KEY);
+
+    const vectorStore = new SupabaseVectorStore(embeddingsModel, {
+      client: supabaseClient,
+      tableName: "documents",
+      queryName: "match_documents",
+    });
+
     let messages: BaseMessage[] = [new SystemMessage(SYSTEM_PROMPT)];
     for (let item of chats) {
       if (item.role == "user") messages.push(new HumanMessage(item.message));
