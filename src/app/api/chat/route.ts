@@ -10,10 +10,13 @@ import {
   BaseMessage,
 } from "@langchain/core/messages";
 import { SupabaseVectorStore } from "@langchain/community/vectorstores/supabase";
-import { createClient } from "@supabase/supabase-js";
+import { createClient, SupabaseClient } from "@supabase/supabase-js";
 
 export const runtime = "nodejs";
 
+// -----------------------------
+// 🧠 System Prompt
+// -----------------------------
 const SYSTEM_PROMPT = `
 You are ParasBot — a friendly, intelligent, and professional AI assistant built by Paras for his personal website.
 
@@ -39,34 +42,60 @@ Behavior rules:
 - Do not use bad words or sexual language in front of the user.
 `;
 
-export async function POST(req: NextRequest) {
-  try {
-    const chats = await req.json();
+// import { config } from "dotenv";
+// config();
 
+// -----------------------------
+// ⚡ Lazy singletons
+// -----------------------------
+let llm: ChatGoogleGenerativeAI | null = null;
+let embeddingsModel: GoogleGenerativeAIEmbeddings | null = null;
+let supabaseClient: SupabaseClient | null = null;
+let vectorStore: SupabaseVectorStore | null = null;
+
+// Initialize only once per runtime
+function getClients() {
+  if (!llm) {
     const GEMINI_API_KEY = process.env.GEMINI_API_KEY!;
     const GEMINI_MODEL = process.env.GEMINI_MODEL!;
     const GEMINI_EMBEDDING_MODEL = process.env.GEMINI_EMBEDDING_MODEL!;
     const SUPABASE_SERVICE_KEY = process.env.SUPABASE_SERVICE_KEY!;
     const SUPABASE_URL = process.env.SUPABASE_URL!;
 
-    const llm = new ChatGoogleGenerativeAI({
+    llm = new ChatGoogleGenerativeAI({
       apiKey: GEMINI_API_KEY,
       model: GEMINI_MODEL,
       temperature: 0.7,
     });
 
-    const embeddingsModel = new GoogleGenerativeAIEmbeddings({
+    embeddingsModel = new GoogleGenerativeAIEmbeddings({
       apiKey: GEMINI_API_KEY,
       model: GEMINI_EMBEDDING_MODEL,
     });
 
-    const supabaseClient = createClient(SUPABASE_URL, SUPABASE_SERVICE_KEY);
+    supabaseClient = createClient(SUPABASE_URL, SUPABASE_SERVICE_KEY);
 
-    const vectorStore = new SupabaseVectorStore(embeddingsModel, {
+    vectorStore = new SupabaseVectorStore(embeddingsModel!, {
       client: supabaseClient,
       tableName: "documents",
       queryName: "match_documents",
     });
+
+    console.log("LangChain & Supabase clients initialized once");
+  }
+  return { llm: llm!, vectorStore: vectorStore! };
+}
+
+// -----------------------------
+// 🚀 POST handler
+// -----------------------------
+export async function POST(req: NextRequest) {
+  try {
+    const chats = await req.json();
+
+    const { llm, vectorStore } = getClients();
+
+    console.log("Supabase Vector Store Created");
 
     let messages: BaseMessage[] = [new SystemMessage(SYSTEM_PROMPT)];
     for (let item of chats) {
@@ -77,6 +106,8 @@ export async function POST(req: NextRequest) {
 
     let topResults = await vectorStore.similaritySearch(lastMessage, 2);
 
+    console.log("Got top results from vectorStore");
+
     const context = topResults.map((item) => item.pageContent).join("\n");
     messages.pop();
     messages.push(
@@ -84,9 +115,14 @@ export async function POST(req: NextRequest) {
     );
 
     let response = await llm.generate([messages]);
+
+    console.log("Got response from Google AI");
+
     let reply = response.generations[0][0].text;
+
     return NextResponse.json({ data: reply });
   } catch (err) {
+    console.log("Chatbot Error:", err);
     return NextResponse.json({
       data: "Currently the ChatBot🤖 Service is down! Sorry for your inconvience😔",
     });
