@@ -10,10 +10,10 @@ import {
   BaseMessage,
 } from "@langchain/core/messages";
 import { SupabaseVectorStore } from "@langchain/community/vectorstores/supabase";
-import { config } from "dotenv";
 import { createClient } from "@supabase/supabase-js";
 
-config();
+// import { config } from "dotenv";
+// config();
 
 const SYSTEM_PROMPT = `
 You are ParasBot — a friendly, intelligent, and professional AI assistant built by Paras for his personal website.
