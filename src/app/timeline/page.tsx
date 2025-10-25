@@ -72,7 +72,7 @@ const Timeline = () => {
         },
         {
             title:"National Institute of Technology Patna (NITP)",
-            desc:["Student of Bachelor of Technology(B.Tech) with specialization in Computer Science and Engineering(CSE). Going to graduate in June 2024"],
+            desc:["Student of Bachelor of Technology(B.Tech) with specialization in Computer Science and Engineering(CSE)."],
             extra:"Score: 8.52 CGPA",
             time:"Dec 2020 - May 2024",
             location:"Patna, Bihar, India"

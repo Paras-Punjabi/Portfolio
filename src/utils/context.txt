@@ -1,0 +1,41 @@
+My name is Paras Punjabi, I am from Indore, Madhya Pradesh. I have completed my B.Tech from National Institute of Technology Patna (NITP) in Computer Science and Engineering (CSE) branch. My areas of interest are Full Stack Web Development, Machine Learning, Deep Learning and Problem Solving. My aspiration is to become a good Software Developer Engineer and contribute more in this field.
+
+Working as Product Engineer at TCS from Sept 2024 to Present. Work Done at TCS: Python Backend Developer with hands-on experience in building scalable services and data pipelines using FastAPI, ELK Stack, Pandas, Kafka, and ETL workflows.Designed and optimized high-performance ETL pipelines that processed and aggregated 100K+ Elasticsearch records, automated exports to Excel/CSV, and securely transferred outputs to remote servers using the Paramiko library, leveraging multithreading to accelerate processing and reduce report generation time by 60%, while streamlining operational workflows.Engineered a scalable configuration management system using Python's ConfigParser that dynamically loads environment-specific .ini files (local, pre-prod, prod) into Python class attributes, reducing configuration errors by 90%, improving maintainability of the codebase, and ensuring seamless environment switching across the entire application.Designed and implemented a scalable Kafka-based architecture where a daily cron-triggered producer publishes events for circle wise reports to a consumer group distributed over 5 servers, enabling parallel generation of 50+ reports per circle with high reliability and efficiency. Further extended the architecture to support weekly, monthly, and quarterly reporting pipelines for comprehensive automation. Duration: Sept 2024 to Present.
+
+NextJS Developer Intern at Debales.AI. Work Done: Worked as a NextJS Developer Intern, I worked on building and maintaining full-stack applications using Next.js v14, TailwindCSS, and Docker.Developed and managed APIs for platforms like debales.ai and brainlox.ai, integrating FastAPI and Express backends and deploying on AWS with DynamoDB database.Designed chatbot-enabled websites using Retrieval-Augmented Generation (RAG) architecture, leveraging open-source LLMs such as OpenAI and Google Gemini along with vector databases like Pinecone and FAISS through Langchain. Duration: Feb 2024 to July 2024.
+
+College: National Institute of Technology Patna (NITP). Student of Bachelor of Technology(B.Tech) with specialization in Computer Science and Engineering(CSE). Duration: Dec 2020 - May 2024
+
+Class 12: La Sagesse Academy. Student of Science (PCM) in class 12th of CBSE board.Score: 90.8 %.Indore, Madhya Pradesh, India. Duration: April 2019 - March 2020
+
+Class 10: La Sagesse Academy. Class 10th of CBSE board. Score: 85.2 %. Duration: April 2017 - March 2018
+
+Skills: Python,C/C++,Java,JavaScript,NodeJS,ClerkJS,Typescript,HTML,CSS,DSA,ReactJS,NextJS,Vite,ExpressJS,TailwindCSS,Bootstrap,FastAPI,Flask,MongoDB,MySQL,DynamoDB,PostgreSQL,ElasticSearch,Git,AWS Services,Docker,Kubernetes,RabbitMQ,MinIO S3,Kafka,Redis,Numpy,Pandas,Scikit Learn,Tensorflow,PyTorch,Computer Vision,Langchain,Firebase,Supabase,Linux,OpenAI,Pinecone,MCP
+
+Social Media Handles: GitHub: https://github.com/Paras-Punjabi, Linkedin: https://www.linkedin.com/in/paras-punjabi-0b7669220/, Portfolio: https://paras-punjabi.vercel.app/, Instagram: https://www.instagram.com/paras.punjabi.7, LeetCode: https://leetcode.com/Paras_Punjabi/, Facebook: https://www.facebook.com/paras.punjabi.7/, Codeforces: https://codeforces.com/profile/Paras_Punjabi, Resume: https://drive.google.com/file/d/1WmSPWJWljaLP5DN6GzeiLNYABRABfVLf/view, Mobile Number: +918989834510, Mail: paraspunjabi2002@gmail.com
+
+Project: Paras Dive is a full-featured Google Drive clone built using Next.js, React.js, Tailwind CSS, Express.js, and MongoDB, allowing users to upload, remove, and manage files along with performing CRUD operations for notes. It follows the MVC architecture, with the frontend hosted on Vercel, backend on Render, and database on MongoDB Atlas. GitHub link: https://github.com/Paras-Punjabi/Paras-Drive
+
+Project: Personal Portfolio Website is a NextJS Website which uses supabase postgres database where I have stored all my projects. Also I have used supabase pgVector to store the embeddings which is used by my chatbot integrated in this website made using langchain, langchain_google_genai, and also supports markdown rendering inside the chatbox. Also integrated automatic mailing system using emailjs triggered when user submits then contact form.  
+
+Project: PDF-GPT is a Retrieval-Augmented Generation (RAG) application built with FastAPI, Vite, PostgreSQL, LangChain, and FAISS, enabling users to upload PDFs and ask context-based questions using Google Generative AI, supporting multiple chat sessions with unique contexts. GitHub link: https://github.com/Paras-Punjabi/PDF-GPT
+
+Project: PixTweak is a FastAPI-powered image transformation web app inspired by ImageKit.io that performs real-time transformations such as resizing, rotation, flipping, and adding text via URL parameters, using OpenCV, NumPy, RabbitMQ, MySQL, Docker, and Docker Compose. GitHub link: https://github.com/Paras-Punjabi/PixTweak
+
+Project: Visual Science is a hackathon project developed during HackNITP 4.0 that demonstrates scientific concepts using custom-made animations with Node.js, Express.js, EJS, Bootstrap 5, and HTML5 canvas. GitHub link: https://github.com/Paras-Punjabi/Hackathon-Competition-HackNITP-4.0-
+
+Project: Two-Stream Network for Vision-Based Human Activity Recognition uses Python, TensorFlow/Keras, ConvLSTM2D, CNN, and attention mechanisms to detect and classify violent actions in videos, showcasing skills in computer vision and deep learning. GitHub link: https://github.com/Paras-Punjabi/TWO-STREAM-NETWORK-FOR-VISION-BASED-VOILENCE-DETECTION
+
+Project: Notepad - Clone is a Python desktop app built with Tkinter that replicates the functionality of Windows Notepad while adding the ability to execute Python and Node.js code directly within the editor. GitHub link: https://github.com/Paras-Punjabi/Python-Projects/tree/master/Notepad
+
+Project: Chatting App is another Python desktop application using Tkinter, Socket, and Threading modules, supporting multi-client real-time communication through a graphical interface for both client and server. GitHub link: https://github.com/Paras-Punjabi/Python-Projects/tree/master/Chatting%20App
+
+Project: Snake Game recreates the classic arcade experience using HTML5, CSS3, and Vanilla JavaScript, implementing smooth gameplay and collision logic through the canvas element. GitHub link: https://github.com/Paras-Punjabi/Snake-Game
+
+Project: Calendar App is a JavaScript-based calendar built with HTML5, CSS3, and Bootstrap 5, allowing users to navigate months and years while storing important events in LocalStorage. GitHub link: https://github.com/Paras-Punjabi/Calendar-App
+
+Project: Visualizer App is a camera-based web app made with HTML5, CSS3, and JavaScript that applies real-time filters using the Navigator and Media Recorder APIs, allowing users to capture and record videos with dynamic effects. GitHub link: https://github.com/Paras-Punjabi/Visualizer-Camera-Effects-
+
+Project: Music Mood Classification Model is a deep learning project using TensorFlow/Keras, Librosa, and Scikit-learn to classify audio clips into moods such as happy, sad, or romantic, achieving accuracies up to 86% on Kaggle datasets. GitHub link: https://github.com/Paras-Punjabi/music-mood-classification
+
+Project: iSangeet Music App is a web-based music player built using HTML5, CSS3, and JavaScript, featuring a playlist of 14 songs, draggable timeline, volume equalizer, and a download option for offline listening. GitHub link: https://github.com/Paras-Punjabi/iSangeet-Music-App.

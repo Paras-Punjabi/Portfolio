@@ -5,6 +5,7 @@ import { FaGithub, FaLinkedin, FaInstagram, FaFacebookSquare,FaLongArrowAltRight
 import { SiLeetcode } from "react-icons/si";
 import Link from "next/link";
 import type { Metadata } from "next";
+import ChatBot from "@/components/ChatBot";
 
 export const metadata: Metadata = {
   title: "Paras Punjabi - About",
@@ -47,6 +48,7 @@ export const metadata: Metadata = {
 const About = () => {
   return (
     <>
+      <ChatBot minimize={true}/>
       <div className="about-bg">
       <Navbar hidetitle={false} />
         <section className="text-gray-400 body-font">

@@ -55,3 +55,43 @@
     background-color: #111827;
 }
 
+.bg-indigo-600.text-white.p-3.flex.justify-between.items-center {
+        background: linear-gradient(90deg, #7c3aed 0%, #06b6d4 100%);
+        box-shadow: inset 0 -6px 18px rgba(2,6,23,0.45);
+}
+
+/* bot message bubble — subtle glassy gradient with soft border & glow */
+.bot-bubble {
+        background: linear-gradient(180deg, rgba(59,130,246,0.06) 0%, rgba(15,23,42,0.72) 100%);
+        border: 1px solid rgba(99,102,241,0.12);
+        color: #e6f7ff;
+        box-shadow: 0 8px 20px rgba(2,6,23,0.5);
+}
+
+/* user message: keep the existing bg color from Tailwind but apply a soft sheen/shade */
+.user-bubble {
+        /* overlay a subtle sheen while preserving the underlying bg color (.bg-[#384856]) */
+        background-image: linear-gradient(180deg, rgba(255,255,255,0.03) 0%, rgba(0,0,0,0.18) 100%);
+        background-blend-mode: overlay;
+        border: 1px solid rgba(88,101,115,0.18);
+        color: #e9f7f0;
+        box-shadow: 0 6px 14px rgba(2,6,23,0.32);
+}
+
+/* keep text wrapping neat on small screens */
+.bot-bubble .whitespace-pre-wrap,
+.user-bubble .whitespace-pre-wrap {
+        color: inherit;
+}
+
+.chat-scroll::-webkit-scrollbar { width: 10px; }
+.chat-scroll::-webkit-scrollbar-track { background: transparent; }
+.chat-scroll::-webkit-scrollbar-thumb {
+    background: linear-gradient(180deg,#64748b 0%, #06b6d4 100%);
+    border-radius: 9999px;
+    border: 2px solid rgba(0,0,0,0.25);
+}
+.chat-scroll::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(180deg,#4b5563 0%, #0ea5a7 100%);
+}
+.chat-scroll { scrollbar-width: thin; scrollbar-color: #06b6d4 transparent; }
