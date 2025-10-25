@@ -57,8 +57,8 @@ let vectorStore: SupabaseVectorStore | null = null;
 function getClients() {
   if (!llm) {
     const GEMINI_API_KEY = process.env.GEMINI_API_KEY!;
-    const GEMINI_MODEL = process.env.GEMINI_MODEL!;
-    const GEMINI_EMBEDDING_MODEL = process.env.GEMINI_EMBEDDING_MODEL!;
+    const GEMINI_MODEL = "models/gemini-2.5-flash";
+    const GEMINI_EMBEDDING_MODEL = "models/gemini-embedding-001";
     const SUPABASE_SERVICE_KEY = process.env.SUPABASE_SERVICE_KEY!;
     const SUPABASE_URL = process.env.SUPABASE_URL!;
 
