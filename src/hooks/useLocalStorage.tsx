@@ -9,6 +9,13 @@ export type MessageType = {
 
 const useLocalStorage = (key:string,initalValue:MessageType[] = []) => {
     const [data,setData] = useState<MessageType[]>(initalValue);
+
+    const updateFromLS = ()=>{
+        if(localStorage.getItem(key) === null){
+            setData([{role:"bot",message:"Hey there 👋 I'm ParasBot — Paras's AI assistant! How can I help you today"}])
+        }
+        setData(JSON.parse(localStorage.getItem(key) as string) as MessageType[]);
+    }
     
     useEffect(()=>{
         if(localStorage.getItem(key) === null){
@@ -17,6 +24,11 @@ const useLocalStorage = (key:string,initalValue:MessageType[] = []) => {
         else{
             let raw = JSON.parse(localStorage.getItem(key) as string) as MessageType[];
             setData(raw);
+        }
+
+        window.addEventListener("focus",updateFromLS);
+        return ()=>{
+            window.removeEventListener("focus",updateFromLS);
         }
     },[]);
 

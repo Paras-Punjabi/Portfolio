@@ -26,7 +26,7 @@ export default function Chatbot({minimize=true} : {minimize:boolean}) {
     const [isOpen, setIsOpen] = useState<boolean>(!minimize);
     const [isDisabled, setIsDisabled] = useState<boolean>(false);
     const chatWindow = useRef<HTMLDivElement>(null);
-    const {data:messages,setDataInLS: setMessages} = useLocalStorage(localStorageKey,[{role:"bot",message:"Hey there 👋 I'm ParasBot — Paras's AI assistant! How can I help you today"}]);
+    const {data:messages,setDataInLS: setMessages} = useLocalStorage(localStorageKey,[]);
     const [messageInput, messageSetInput] = useState("");
 
     const renderMessages = () => {
